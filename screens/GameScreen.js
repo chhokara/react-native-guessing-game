@@ -8,7 +8,7 @@ import {
   Dimensions,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { ScreenOrientation } from "expo";
+// import { ScreenOrientation } from "expo";
 
 import NumberContainer from "../components/NumberContainer";
 import Card from "../components/Card";
