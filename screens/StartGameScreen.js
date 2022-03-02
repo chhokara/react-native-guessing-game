@@ -32,10 +32,10 @@ const StartGameScreen = (props) => {
       setButtonWidth(Dimensions.get("window").width / 4);
     };
 
-    let listener = Dimensions.addEventListener("change", updateLayout);
+    Dimensions.addEventListener("change", updateLayout);
 
     return () => {
-      Dimensions.remove(listener);
+      Dimensions.removeEventListener("change", updateLayout);
     };
   });
 

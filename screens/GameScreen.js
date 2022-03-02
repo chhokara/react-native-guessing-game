@@ -64,10 +64,10 @@ const GameScreen = (props) => {
       setAvailableDeviceHeight(Dimensions.get("window").height);
     };
 
-    let listener = Dimensions.addEventListener("change", updateLayout);
+    Dimensions.addEventListener("change", updateLayout);
 
     return () => {
-      Dimensions.remove(listener);
+      Dimensions.removeEventListener("change", updateLayout);
     };
   });
 

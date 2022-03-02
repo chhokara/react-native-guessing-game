@@ -27,10 +27,10 @@ const GameOverScreen = (props) => {
       setAvailableDeviceHeight(Dimensions.get("window").height);
     };
 
-    let listener = Dimensions.addEventListener("change", updateLayout);
+    Dimensions.addEventListener("change", updateLayout);
 
     return () => {
-      Dimensions.remove(listener);
+      Dimensions.remove("change", updateLayout);
     };
   });
 

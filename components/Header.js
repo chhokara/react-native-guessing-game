@@ -15,7 +15,7 @@ const Header = (props) => {
         }),
       }}
     >
-      <TitleText style={style.title}>{props.title}</TitleText>
+      <TitleText style={styles.title}>{props.title}</TitleText>
     </View>
   );
 };
